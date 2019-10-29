@@ -1,0 +1,43 @@
+plugins {
+    id 'application'
+    id 'org.openjfx.javafxplugin' version '0.0.8'
+    id 'org.beryx.runtime' version '1.0.0'
+    id "com.github.johnrengelman.shadow" version "4.0.3"
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    implementation group: 'org.fxmisc.richtext', name: 'richtextfx', version: '0.10.2'
+    implementation "io.github.java-diff-utils:java-diff-utils:4.0"
+
+    implementation "org.openjfx:javafx-controls:13.0.1"
+    implementation "org.openjfx:javafx-graphics:13.0.1:win"
+    implementation "org.openjfx:javafx-graphics:13.0.1:linux"
+    implementation "org.openjfx:javafx-graphics:13.0.1:mac"
+}
+
+group 'fo'
+version '1.0-SNAPSHOT'
+
+javafx {
+    version = '13.0.1'
+    modules = [ 'javafx.controls' ]
+}
+
+sourceCompatibility = 1.8
+mainClassName = 'fo.verrata.Launcher'
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'fo.verrata.Launcher'
+    }
+    from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+}
+
+

@@ -1,0 +1,64 @@
+.removed {
+    -rtfx-background-color: #fcb0b9;
+    /*-fx-fill: #24292e;*/
+}
+
+.added {
+    -rtfx-background-color: #77ffa7;
+    /*-fx-fill: #24292e;*/
+}
+
+.highlighted {
+    -rtfx-background-color: #308ff8;
+    -fx-fill: #fff;
+}
+
+.text-label {
+    -fx-text-align: center;
+    -fx-background-color: #fff;
+}
+
+.code-area {
+    -fx-background-color: #fefefe;
+}
+
+.code-area .selection {
+    -fx-fill: #308ff8;
+}
+
+.grid-pane {
+    -fx-background-color: #ccc;
+    -fx-vgap: 1;
+    -fx-hgap: 1;
+    -fx-padding: 1;
+}
+
+.context-menu {
+    -fx-min-width: 15em;
+    -fx-background-color: #fefefe;
+}
+
+.menu-item {
+}
+
+.menu-item:hover, .menu-item:focused {
+    -fx-background-color: #ddd;
+}
+
+.menu-item > .graphic-container {
+    -fx-padding: 0em 0.333em 0em 0em;
+}
+
+/********** LABEL ***********/
+.menu-item >.label {
+    -fx-background-color:transparent;
+    -fx-padding: 0.1em 0.1em 0.1em 0.1em;
+    -fx-text-fill: #24292e;
+    -fx-effect: null;
+    -fx-font-size: 13px;
+    -fx-font-family: "Courier New";
+}
+
+.menu-item:focused > .label {
+    -fx-text-fill: #24292e;
+}
